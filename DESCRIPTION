@@ -5,9 +5,15 @@ Authors@R: person('Morgane', 'Topart', email = 'm.topart@agro-transfert-rt.org',
 Description: PKG_DESC.
 License: MIT + file LICENSE
 Imports: 
+    bslib,
     config (>= 0.3.1),
+    dplyr,
+    flexdashboard,
     golem (>= 0.3.1),
-    shiny (>= 1.7.1)
+    prompter,
+    shiny (>= 1.7.1),
+    shinyjs,
+    tibble
 Encoding: UTF-8
 LazyData: true
-RoxygenNote: 7.1.1
+RoxygenNote: 7.1.2
