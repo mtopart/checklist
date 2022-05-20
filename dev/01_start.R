@@ -20,11 +20,11 @@
 ## 
 golem::fill_desc(
   pkg_name = "checklist", # The Name of the package containing the App 
-  pkg_title = "PKG_TITLE", # The Title of the package containing the App 
+  pkg_title = "La checklist Points de repère", # The Title of the package containing the App 
   pkg_description = "PKG_DESC.", # The Description of the package containing the App 
-  author_first_name = "AUTHOR_FIRST", # Your First Name
-  author_last_name = "AUTHOR_LAST", # Your Last Name
-  author_email = "AUTHOR@MAIL.COM", # Your Email
+  author_first_name = "Morgane", # Your First Name
+  author_last_name = "Topart", # Your Last Name
+  author_email = "m.topart@agro-transfert-rt.org", # Your Email
   repo_url = NULL # The URL of the GitHub Repo (optional) 
 )     
 
