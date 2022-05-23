@@ -345,7 +345,21 @@ mod_situation_generale_server <- function(id){
                                    danger = c(0, 2)))
     })    
     
- 
+ # Download ----------------------------------------------------
+    
+    
+    output$dl_1 <- downloadHandler(
+      filename = function() {
+        paste("data-", Sys.Date(), ".csv", sep="")
+      },
+      content = function(file) {
+        write.csv(data, file)
+      }
+    )  
+    
+    
+    
+    
   })
 }
     

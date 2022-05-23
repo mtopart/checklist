@@ -15,7 +15,7 @@
 
 ## Dependencies ----
 ## Add one line by package you want to add as dependency
-usethis::use_package( "tibble" )
+usethis::use_package( "officer" )
 
 ## Add modules ----
 ## Create a module infrastructure in R/
@@ -61,7 +61,7 @@ covrpage::covrpage()
 ## (You'll need GitHub there)
 usethis::use_github()
 
-# GitHub Actions
+1# GitHub Actions
 usethis::use_github_action() 
 # Chose one of the three
 # See https://usethis.r-lib.org/reference/use_github_action.html
