@@ -11,6 +11,7 @@ Imports:
     flexdashboard,
     golem (>= 0.3.1),
     officer,
+    pkgload,
     prompter,
     shiny (>= 1.7.1),
     shinyjs,

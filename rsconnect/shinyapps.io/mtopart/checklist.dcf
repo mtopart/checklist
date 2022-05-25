@@ -1,0 +1,11 @@
+name: checklist
+title:
+username:
+account: mtopart
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 6354895
+bundleId: 5942811
+url: https://mtopart.shinyapps.io/checklist/
+when: 1653471382.50533
+lastSyncTime: 1653471382.50533

@@ -21,7 +21,7 @@ mod_situation_generale_ui <- function(id){
       #style = "background-color:#F5F5F5;",
       use_prompt(),
       
-      ## Situation générale : contexte ----------------------
+      ## Contexte ----------------------
       
       #column(1,),
       
@@ -53,7 +53,7 @@ mod_situation_generale_ui <- function(id){
              br()),
       
       
-      ## Situation générale : analyse des impacts-----------------------------------
+      ## Analyse des impacts-----------------------------------
       
       
       column(5,
@@ -93,7 +93,7 @@ mod_situation_generale_ui <- function(id){
       
       
       
-      ## Situation générale : technique ---------------------           
+      ## Technique ---------------------           
       
       column(5,
              style = "background-color:#E4F5E7;",
@@ -128,7 +128,7 @@ mod_situation_generale_ui <- function(id){
              br()),
       
       
-      ## Situation générale : travail et main d'oeuvre---------------------  
+      ## Travail et main d'oeuvre---------------------  
       
       column(5,
              style = "background-color:#FDFFE0;",
@@ -159,7 +159,7 @@ mod_situation_generale_ui <- function(id){
       column(12,
              br()),
       
-      ## Situation générale : installations et matériels-----------------------    
+      ## Installations et matériels-----------------------    
       
       column(5,
              style = "background-color:#F7DFCD;",
@@ -192,7 +192,7 @@ mod_situation_generale_ui <- function(id){
       column(12,
              br()),
       
-      ## Situation générale : Elements économiques---------------------  
+      ## Elements économiques---------------------  
       
       
       column(5,
@@ -347,13 +347,36 @@ mod_situation_generale_server <- function(id){
     
  # Download ----------------------------------------------------
     
+    tabl_com_1 <- reactive ({
+      
+      list(
+        input$com_gen_cont,
+        input$gen_impacts,
+        input$gen_tech,
+        input$gen_mo,
+        input$gen_mat,
+        input$gen_eco
+        
+      )
+    })
+    
+    
+    doc <- reactive({
+       req(tabl_com_1)
+
+       comm_word(type = "general",
+                 tableau = tabl_com_1())
+
+
+    })
+    
     
     output$dl_1 <- downloadHandler(
       filename = function() {
-        paste("data-", Sys.Date(), ".csv", sep="")
+        paste("commentaires", Sys.Date(), ".docx", sep="")
       },
       content = function(file) {
-        write.csv(data, file)
+        print(doc(), target = file)
       }
     )  
     
